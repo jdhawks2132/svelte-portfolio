@@ -110,7 +110,7 @@
 
 <section id="skills" class="my-10">
 	<div class="container mx-auto flex flex-col justify-center items-center">
-		<img src={Skills} alt="projects" class="w-20 md:w-24 mr-4 mb-10" />
+		<img src={Skills} alt="projects" class="w-20 md:w-24 mb-10" />
 	</div>
 	<div class="flex flex-col lg:flex-row justify-center items-center">
 		<SkillCard
