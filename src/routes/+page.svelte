@@ -13,6 +13,8 @@
 	import Email from '../assets/svgs/email.svg';
 </script>
 
+<title> Joshua Hawks </title>
+
 <section
 	id="home"
 	class="container mx-auto py-5 lg:py-10 flex flex-col justify-center items-center"
