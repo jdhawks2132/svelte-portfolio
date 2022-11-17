@@ -98,11 +98,11 @@
 			project={{
 				title: 'Escapade',
 				image:
-					'https://github.com/jdhawks2132/mern-instructions/blob/main/images/escapade.png?raw=true',
-				tags: ['React', 'JSON Server'],
+					'https://github.com/jdhawks2132/escapade-mern/blob/main/frontend/src/assets/images/Escapade-Screenshot.jpg?raw=true',
+				tags: ['React', 'Node', 'Express', 'MongoDB'],
 				description: 'South American travel application that targeting adventurous thrill-seekers.',
-				github: 'https://github.com/jdhawks2132/escapade',
-				demo: 'https://jdhawks2132.github.io/escapade/'
+				github: 'https://github.com/jdhawks2132/escapade-mern',
+				demo: 'https://escapade-mern.netlify.app/'
 			}}
 		/>
 	</div>
