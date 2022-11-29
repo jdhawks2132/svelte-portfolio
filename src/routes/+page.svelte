@@ -56,7 +56,7 @@
 				I am passionate about helping others learn to code and serve as a <span class="text-red-800"
 					>Teaching Assistant</span
 				>
-				at Washington State University in St. Louis' Software Engineering Bootcamp. The bootcamp is a
+				at Washington University in St. Louis' Software Engineering Bootcamp. The bootcamp is a
 				24-week program focusing on the <span class="text-red-800">MERN</span> stack.
 			</p>
 
