@@ -56,8 +56,8 @@
 				I am passionate about helping others learn to code and serve as a <span class="text-red-800"
 					>Teaching Assistant</span
 				>
-				at Washington University in St. Louis' Software Engineering Bootcamp. The bootcamp is a
-				24-week program focusing on the <span class="text-red-800">MERN</span> stack.
+				at Washington University in St. Louis' Software Engineering Bootcamp. The bootcamp is a 24-week
+				program focusing on the <span class="text-red-800">MERN</span> stack.
 			</p>
 
 			<p class="mb-4">
@@ -103,6 +103,41 @@
 				description: 'South American travel application that targeting adventurous thrill-seekers.',
 				github: 'https://github.com/jdhawks2132/escapade-mern',
 				demo: 'https://escapade-mern.netlify.app/'
+			}}
+		/>
+	</div>
+	<div class="flex flex-col lg:flex-row ">
+		<ProjectCard
+			project={{
+				title: 'Vendor Management System',
+				image:
+					'https://github.com/jdhawks2132/mqvc/raw/main/client/src/assets/images/screenshots/dashboard.png?raw=true',
+				tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
+				description: 'Vendor Management System designed for an arts organization.',
+				github: 'https://github.com/jdhawks2132/mqvc',
+				demo: 'https://mqvc.herokuapp.com/'
+			}}
+		/>
+		<ProjectCard
+			project={{
+				title: 'Texas Bassoon Center',
+				image:
+					'https://github.com/jdhawks2132/tx-bassoon/blob/main/src/lib/assets/images/landing_page.png?raw=true',
+				tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
+				description: 'Landing page for a the Texas Bassoon Center in Dallas, TX.',
+				github: 'https://github.com/jdhawks2132/tx-bassoon',
+				demo: 'https://tx-bassoon-center.vercel.app/'
+			}}
+		/>
+		<ProjectCard
+			project={{
+				title: 'Weather-All',
+				image: 'https://github.com/jdhawks2132/weatherman/blob/main/assets/weatherall.png?raw=true',
+				tags: ['Html', 'Bootstrap', 'JavaScript'],
+				description:
+					'Weather App that uses Openweather to search US cities and return the current forecast.',
+				github: 'https://github.com/jdhawks2132/weatherman',
+				demo: 'https://jdhawks2132.github.io/weatherman/'
 			}}
 		/>
 	</div>
