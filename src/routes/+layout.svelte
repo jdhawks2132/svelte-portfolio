@@ -5,6 +5,6 @@
 
 <Navbar />
 
-<main class="bg-gray-100 px-10">
+<main class="bg-gray-100 px-4 lg:px-10">
 	<slot />
 </main>
