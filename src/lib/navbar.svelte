@@ -22,25 +22,39 @@
 			</a>
 			<!-- Mobile menu button -->
 			<div on:click={toggleNavbar} class="flex md:hidden" on:keyup={toggleNavbar}>
-				<button
-					type="button"
-					class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="w-6 h-6"
+				{#if showMenu}
+					<button
+						type="button"
+						class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
 					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-						/>
-					</svg>
-				</button>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6"
+						>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				{:else}
+					<button
+						type="button"
+						class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6"
+						>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</button>
+				{/if}
 			</div>
 		</div>
 
