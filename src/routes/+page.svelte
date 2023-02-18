@@ -44,7 +44,7 @@
 			<img src={Headshot} alt="josh hawks headshot" class="w-52 h-52 m-4 shadow-lg rounded-lg" />
 		</div>
 
-		<div class="p-1 text-xs sm:text-md md:p-4 xl:text-lg lg:p-6 text-gray-700 text-center w-3/4 ">
+		<div class="p-1 text-sm sm:text-md md:p-4 xl:text-lg lg:p-6 text-gray-700 text-center w-11/12">
 			<p class="mt-4 sm:mt-0 mb-4 ">
 				<span class="text-red-800">Full-stack Software Engineer</span> at the Texas School Safety
 				Center located at Texas State University in San Marcos, TX. Utilizing a
@@ -192,36 +192,3 @@
 		</a>
 	</div>
 </section>
-
-<style>
-	/* typewriter effect */
-	/* @keyframes blink-caret {
-		50% {
-			border-color: transparent;
-		}
-	}
-
-	.typewrite {
-		border-right: 0.08em solid #fff;
-		white-space: nowrap;
-		overflow: hidden;
-		margin: 0 auto;
-		letter-spacing: 0.15em;
-		animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-	}
-
-	@keyframes typing {
-		from {
-			width: 0;
-		}
-		to {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 480px) {
-		.typewrite {
-			font-size: 0.5rem;
-		}
-	} */
-</style>
