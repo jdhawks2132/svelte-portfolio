@@ -86,7 +86,8 @@
 		<ProjectCard
 			project={{
 				title: '//FIS-Assist',
-				image: 'https://github.com/jdhawks2132/ProjectManagementApp/blob/main/fisassist.jpg?raw=true',
+				image:
+					'https://github.com/jdhawks2132/ProjectManagementApp/blob/main/fisassist.jpg?raw=true',
 				tags: ['React', 'Firebase', 'Firestore'],
 				description: 'Project Management App that allows users to track their projects and tasks.',
 				github: 'https://github.com/jdhawks2132/ProjectManagementApp',
