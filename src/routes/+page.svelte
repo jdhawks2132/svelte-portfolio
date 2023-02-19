@@ -76,8 +76,7 @@
 		<ProjectCard
 			project={{
 				title: 'Bassoon Guru',
-				image:
-					'https://github.com/jdhawks2132/mern-instructions/blob/main/images/bssn.png?raw=true',
+				image: 'https://github.com/jdhawks2132/bassoonguru/blob/main/bassoonGuru.jpg?raw=true',
 				tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
 				description: 'A web application for bassoonists to practice and improve their skills.',
 				github: 'https://github.com/jdhawks2132/bassoonguru',
@@ -87,7 +86,7 @@
 		<ProjectCard
 			project={{
 				title: '//FIS-Assist',
-				image: 'https://github.com/jdhawks2132/mern-instructions/blob/main/images/fis.png?raw=true',
+				image: 'https://github.com/jdhawks2132/ProjectManagementApp/blob/main/fisassist.jpg?raw=true',
 				tags: ['React', 'Firebase', 'Firestore'],
 				description: 'Project Management App that allows users to track their projects and tasks.',
 				github: 'https://github.com/jdhawks2132/ProjectManagementApp',
