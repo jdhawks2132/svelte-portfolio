@@ -85,13 +85,13 @@
 		/>
 		<ProjectCard
 			project={{
-				title: '//FIS-Assist',
+				title: 'Thunder Kitties Website',
 				image:
-					'https://github.com/jdhawks2132/ProjectManagementApp/blob/main/fisassist.jpg?raw=true',
-				tags: ['React', 'Firebase', 'Firestore'],
-				description: 'Project Management App that allows users to track their projects and tasks.',
-				github: 'https://github.com/jdhawks2132/ProjectManagementApp',
-				demo: 'https://hawksnest-c3df1.firebaseapp.com/login'
+					'https://github.com/jdhawks2132/tk-web/blob/main/static/images/tk_screenshot.png?raw=true',
+				tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
+				description: 'Website for the Thunder Kitties, a softball team in Dallas, TX.',
+				github: 'https://github.com/jdhawks2132/tk-web',
+				demo: 'https://www.thunderkitties.com/'
 			}}
 		/>
 		<ProjectCard
