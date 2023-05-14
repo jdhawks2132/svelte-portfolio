@@ -46,23 +46,35 @@
 
 		<div class="p-1 text-sm sm:text-md md:p-4 xl:text-lg lg:p-6 text-gray-700 text-center w-11/12">
 			<p class="mt-4 sm:mt-0 mb-4 ">
-				<span class="text-red-800">Full-stack Software Engineer</span> at the Texas School Safety
-				Center located at Texas State University in San Marcos, TX. Utilizing a
-				<span class="text-red-800">React/ Ruby on Rails</span> tech stack, I am responsible for the development
-				and maintenance of the organization's website, databases, and applications.
+				Full-Stack Software Engineer at the <span class="text-red-800 font-semibold"
+					>Texas School Safety Center</span
+				>, part of Texas State University in San Marcos, TX. With expertise in
+				<span class="text-red-800 font-semibold">React</span>
+				and <span class="text-red-800 font-semibold">Ruby on Rails</span>, I develop and maintain
+				the organization's websites, databases, and applications, ensuring high-quality and
+				efficient solutions. My background in
+				<span class="text-red-800 font-semibold">music education</span>
+				and <span class="text-red-800 font-semibold">graphic design</span> has given me a unique perspective,
+				allowing me to approach problem-solving with creativity and precision.
 			</p>
-
 			<p class="mb-4">
-				I am passionate about helping others learn to code and serve as a <span class="text-red-800"
+				As a dedicated educator, I serve as a <span class="text-red-800 font-semibold"
 					>Teaching Assistant</span
 				>
-				at Washington University in St. Louis' Software Engineering Bootcamp. The bootcamp is a 24-week
-				program focusing on the <span class="text-red-800">MERN</span> stack.
+				for Washington University in St. Louis' Software Engineering Bootcamp, a 24-week program that
+				focuses on the <span class="text-red-800 font-semibold">MERN stack</span>. I am passionate
+				about empowering others to learn and excel in coding, and I take pride in helping students
+				succeed in their journey.
 			</p>
 
 			<p class="mb-4">
-				I am a freelance classical musician (oboe and bassoon) and graphic designer. In my spare
-				time, I enjoy hiking, biking, and playing pickle ball.
+				In addition to my technical pursuits, I am a freelance classical musician, playing both the
+				<span class="text-red-800 font-semibold">oboe</span> and
+				<span class="text-red-800 font-semibold">bassoon</span>, as well as a graphic designer.
+				Outside of work, I find joy in <span class="text-red-800 font-semibold">hiking</span>,
+				<span class="text-red-800 font-semibold">biking</span>, and playing
+				<span class="text-red-800 font-semibold">pickleball</span>, always seeking new ways to
+				challenge myself and embrace a balanced lifestyle.
 			</p>
 		</div>
 	</div>
