@@ -83,7 +83,7 @@
 			>
 			<a
 				class="px-4 py-2 ml-4 text-sm text-white bg-red-800 rounded-lg hover:bg-red-700"
-				href="https://drive.google.com/file/d/10OFKv_3F9LljCaa07hSS66DRZbxY52Et/view?usp=sharing"
+				href="https://drive.google.com/file/d/15tGi8ASwkBYsKsHWpsLEGa_tM95EHgr0/view?usp=sharing"
 				target="_blank"
 				rel="noopener noreferrer"
 				on:click={closeMenu}>Resume</a
