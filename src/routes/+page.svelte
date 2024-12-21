@@ -46,7 +46,7 @@
 
 		<div class="p-1 text-sm sm:text-md md:p-4 xl:text-lg lg:p-6 text-gray-700 text-center w-11/12">
 			<p class="mt-4 sm:mt-0 mb-4 ">
-				Full-Stack Software Engineer at the <span class="text-red-800 font-semibold"
+				Senior Full-Stack Software Engineer at the <span class="text-red-800 font-semibold"
 					>Texas School Safety Center</span
 				>, part of Texas State University in San Marcos, TX. With expertise in
 				<span class="text-red-800 font-semibold">React</span>
