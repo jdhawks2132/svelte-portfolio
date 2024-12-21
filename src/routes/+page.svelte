@@ -83,7 +83,7 @@
 				tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
 				description: 'A web application for bassoonists to practice and improve their skills.',
 				github: 'https://github.com/jdhawks2132/bassoonguru',
-				demo: 'https://bassoonguru.herokuapp.com/'
+				demo: null
 			}}
 		/>
 		<ProjectCard
@@ -105,7 +105,7 @@
 				tags: ['React', 'Node', 'Express', 'MongoDB'],
 				description: 'South American travel application that targeting adventurous thrill-seekers.',
 				github: 'https://github.com/jdhawks2132/escapade-mern',
-				demo: 'https://escapade-mern.netlify.app/'
+				demo: null
 			}}
 		/>
 	</div>
@@ -118,7 +118,7 @@
 				tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
 				description: 'Vendor Management System designed for an arts organization.',
 				github: 'https://github.com/jdhawks2132/mqvc',
-				demo: 'https://mqvc.herokuapp.com/'
+				demo: null
 			}}
 		/>
 		<ProjectCard

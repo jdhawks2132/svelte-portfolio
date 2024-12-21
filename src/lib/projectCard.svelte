@@ -21,13 +21,15 @@
 				rel="noopener noreferrer"
 				class="w-28 px-4 py-2 text-sm text-white bg-red-800 rounded-lg hover:bg-red-700">Github</a
 			>
-			<a
-				href={project.demo}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="w-28 px-4 py-2 ml-4 text-sm text-white bg-red-800 rounded-lg hover:bg-red-700"
-				>Live Site</a
-			>
+			{#if project.demo}
+				<a
+					href={project.demo}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="w-28 px-4 py-2 ml-4 text-sm text-white bg-red-800 rounded-lg hover:bg-red-700"
+					>Live Site</a
+				>
+			{/if}
 		</div>
 	</div>
 </div>
