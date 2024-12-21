@@ -63,9 +63,10 @@
 				<span class="text-red-800 font-semibold">oboe</span> and
 				<span class="text-red-800 font-semibold">bassoon</span>, as well as a graphic designer.
 				Outside of work, I find joy in <span class="text-red-800 font-semibold">hiking</span>,
-				<span class="text-red-800 font-semibold">biking</span>, and playing
-				<span class="text-red-800 font-semibold">softball</span>, always seeking new ways to
-				challenge myself and embrace a balanced lifestyle.
+				<span class="text-red-800 font-semibold">biking</span>,
+				<span class="text-red-800 font-semibold">softball</span>,
+				<span class="text-red-800 font-semibold">pickleball</span>, and
+				<span class="text-red-800 font-semibold">traveling</span>.
 			</p>
 		</div>
 	</div>
