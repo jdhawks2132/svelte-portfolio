@@ -10,7 +10,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"engines": {
-    "node": "23.1.0"
+    "node": "18.x"
   },
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
