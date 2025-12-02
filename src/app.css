@@ -11,6 +11,8 @@
 	letter-spacing: 0.01em;
 	min-height: 100%;
 	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 :global(#svelte) {
