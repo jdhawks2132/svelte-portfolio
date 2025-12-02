@@ -10,6 +10,7 @@
 	font-family: 'Space Grotesk', 'Cascadia Code', monospace;
 	letter-spacing: 0.01em;
 	min-height: 100%;
+	overflow-x: hidden;
 }
 
 :global(#svelte) {
