@@ -3,13 +3,16 @@
 </script>
 
 <div
-	class="flex flex-col items-center justify-center text-center w-full lg:w-1/3 py-8 px-2 my-5 mx-auto md:mx-5 bg-white rounded-lg shadow-lg"
+	class="relative flex flex-col items-start justify-center w-full py-8 px-6 rounded-2xl border border-white/10 bg-slate-900/60 shadow-xl shadow-cyan-500/10 backdrop-blur"
 >
-	<h2 class="text-2xl font-bold text-red-800">{skill.title}</h2>
-	<div class="flex flex-col items-center justify-center w-full h-full mt-1">
-		<ul class="flex flex-col items-center justify-center w-full h-full mt-1">
+	<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
+	<h2 class="text-2xl font-semibold text-white mb-4">{skill.title}</h2>
+	<div class="flex flex-col items-start justify-center w-full h-full">
+		<ul class="flex flex-wrap items-center gap-2">
 			{#each skill.skills as skill}
-				<li class="mb-2 text-gray-600">{skill}</li>
+				<li class="px-3 py-2 rounded-full text-sm text-slate-100 bg-white/5 border border-white/10">
+					{skill}
+				</li>
 			{/each}
 		</ul>
 	</div>

@@ -5,10 +5,9 @@
 	import Transition from '$lib/transition.svelte';
 </script>
 
-<!-- make the navbar sticky -->
 <Navbar />
 
-<main class="bg-gray-100 px-4 lg:px-10">
+<main class="min-h-screen bg-[#0b1120] text-slate-100 px-4 lg:px-10">
 	<Transition url={$page.url}>
 		<slot />
 	</Transition>

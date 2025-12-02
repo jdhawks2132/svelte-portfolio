@@ -1,198 +1,337 @@
 <script>
-	import Laptop from '../assets/svgs/laptop.svg';
-	import About from '../assets/svgs/about.svg';
 	import Headshot from '../assets/Josh.jpeg';
-	import Chevron from '../assets/svgs/chevron.svg';
-	import Projects from '../assets/svgs/projects.svg';
 	import ProjectCard from '$lib/projectCard.svelte';
-	import Skills from '../assets/svgs/skills.svg';
 	import SkillCard from '$lib/skillCard.svelte';
-	import Connect from '../assets/svgs/connect.svg';
 	import GitHub from '../assets/svgs/github.svg';
 	import LinkedIn from '../assets/svgs/linkedin.svg';
 	import Email from '../assets/svgs/email.svg';
+
+	const heroStack = [
+		'Ruby on Rails',
+		'React',
+		'Next.js',
+		'SvelteKit',
+		'Node',
+		'PostgreSQL',
+		'Tailwind'
+	];
+
+	const projects = [
+		{
+			title: 'Bassoon Guru',
+			image: 'https://github.com/jdhawks2132/bassoonguru/blob/main/bassoonGuru.jpg?raw=true',
+			tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
+			description:
+				'A practice companion for bassoonists to level up their fundamentals and repertoire.',
+			github: 'https://github.com/jdhawks2132/bassoonguru',
+			demo: null
+		},
+		{
+			title: 'Thunder Kitties Website',
+			image:
+				'https://github.com/jdhawks2132/tk-web/blob/main/static/images/tk_screenshot.png?raw=true',
+			tags: ['Next.js', 'Tailwind CSS'],
+			description:
+				'Fast, playful marketing site for a Dallas softball club with live league updates.',
+			github: 'https://github.com/jdhawks2132/tk-web',
+			demo: 'https://www.thunderkitties.com/'
+		},
+		{
+			title: 'Escapade',
+			image:
+				'https://github.com/jdhawks2132/escapade-mern/blob/main/frontend/src/assets/images/Escapade-Screenshot.jpg?raw=true',
+			tags: ['React', 'Node', 'Express', 'MongoDB'],
+			description:
+				'Adventure planning app focused on bold visuals, curated itineraries, and streamlined booking.',
+			github: 'https://github.com/jdhawks2132/escapade-mern',
+			demo: null
+		},
+		{
+			title: 'Vendor Management System',
+			image:
+				'https://github.com/jdhawks2132/mqvc/raw/main/client/src/assets/images/screenshots/dashboard.png?raw=true',
+			tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
+			description: 'Internal tool for an arts org—vendor onboarding, dashboards, and reporting.',
+			github: 'https://github.com/jdhawks2132/mqvc',
+			demo: null
+		},
+		{
+			title: 'Texas Bassoon Center',
+			image:
+				'https://github.com/jdhawks2132/tx-bassoon/blob/main/src/lib/assets/images/landing_page.png?raw=true',
+			tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
+			description:
+				'Elegant landing page for a boutique instrument shop built for performance and SEO.',
+			github: 'https://github.com/jdhawks2132/tx-bassoon',
+			demo: 'https://tx-bassoon-center.vercel.app/'
+		},
+		{
+			title: 'Weather-All',
+			image: 'https://github.com/jdhawks2132/weatherman/blob/main/assets/weatherall.png?raw=true',
+			tags: ['HTML', 'Bootstrap', 'JavaScript'],
+			description: 'Weather explorer using OpenWeather—clear, minimal UI tuned for daily checks.',
+			github: 'https://github.com/jdhawks2132/weatherman',
+			demo: 'https://jdhawks2132.github.io/weatherman/'
+		}
+	];
+
+	const skillGroups = [
+		{
+			title: 'Front-End',
+			skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Svelte', 'Tailwind CSS']
+		},
+		{
+			title: 'Back-End',
+			skills: ['Ruby on Rails', 'Node.js', 'Express', 'MySQL / PostgreSQL', 'MongoDB', 'Firebase']
+		},
+		{
+			title: 'Ops & Craft',
+			skills: ['Git', 'NGINX', 'Heroku / Vercel / Netlify', 'Linux', 'Adobe CC']
+		}
+	];
+
+	const socials = [
+		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/joshuahawks1/', icon: LinkedIn },
+		{ label: 'GitHub', href: 'https://github.com/jdhawks2132', icon: GitHub },
+		{ label: 'Email', href: 'mailto:jdhawks@gmail.com', icon: Email }
+	];
 </script>
 
-<title> Joshua Hawks </title>
+<svelte:head>
+	<title>Joshua Hawks | Full-Stack Engineer</title>
+</svelte:head>
 
-<section
-	id="home"
-	class="container mx-auto py-5 lg:py-10 flex flex-col justify-center items-center"
->
-	<img
-		src={Laptop}
-		alt="laptop computer screen reading hi, my name is joshua hawks full-stack developer"
-		class="md:w-1/2 w-3/4 lg:mt-10"
-	/>
+<section id="home" class="relative overflow-hidden pt-16 lg:pt-24 pb-12">
+	<div class="absolute -left-10 top-10 h-72 w-72 bg-cyan-500/20 blur-3xl" />
+	<div class="absolute right-0 bottom-0 h-80 w-80 bg-emerald-500/10 blur-3xl" />
 
-	<h1
-		class="flex flex-wrap sm:my-11 my-6 md:text-md lg:text-xl lg:my-11 text-center px-4 text-gray-800"
-	>
-		Javascript | React | Svelte | Node | Express | Ruby | Rails
-	</h1>
-	<img src={Chevron} alt="downward chevron" class="mb-10 w-14 lg:w-24 lg:my-10" />
+	<div class="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+		<div class="space-y-8">
+			<div
+				class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.25em] text-cyan-200/80"
+			>
+				<span class="h-2 w-2 rounded-full bg-cyan-300 animate-pulse" />
+				Senior Full-Stack Engineer
+			</div>
+			<h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-slate-50">
+				I build thoughtful, reliable software designed with clarity.
+			</h1>
+			<p class="text-lg text-slate-300 max-w-2xl">
+				I’m a full-stack developer who enjoys shaping products from first idea to production launch.
+				I work comfortably across Rails, React, Svelte, Next.js, and Node. I care a lot about clean
+				interfaces, maintainable systems, and code that feels good to come back to.
+			</p>
+			<div class="flex flex-wrap gap-3">
+				{#each heroStack as tech}
+					<span
+						class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100"
+					>
+						{tech}
+					</span>
+				{/each}
+			</div>
+			<div class="flex flex-wrap gap-4">
+				<a
+					href="#projects"
+					class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 px-6 py-3 text-slate-950 font-semibold shadow-lg shadow-cyan-500/30 hover:from-cyan-200 hover:to-emerald-200"
+				>
+					View Projects
+				</a>
+				<a
+					href="#connect"
+					class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-slate-100 hover:border-cyan-300/60 hover:text-cyan-100"
+				>
+					Say Hello
+				</a>
+			</div>
+			<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Mission</p>
+					<p class="mt-1 text-base text-slate-100">
+						Build software that feels steady and dependable.
+					</p>
+				</div>
+				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
+					<p class="mt-1 text-base text-slate-100">
+						Well-structured React front-ends with solid Rails/Node backends.
+					</p>
+				</div>
+				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
+					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Location</p>
+					<p class="mt-1 text-base text-slate-100">Dallas, Texas</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="relative">
+			<div
+				class="absolute -inset-6 bg-gradient-to-br from-cyan-500/20 via-slate-900 to-emerald-500/10 blur-3xl"
+			/>
+			<div
+				class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl shadow-cyan-500/10 backdrop-blur"
+			>
+				<div class="p-6">
+					<div
+						class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800"
+					>
+						<img src={Headshot} alt="Josh Hawks headshot" class="w-full h-full object-cover" />
+						<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent" />
+						<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+							<div>
+								<p class="text-xs uppercase tracking-[0.2em] text-slate-300">Product builder</p>
+								<p class="text-lg font-semibold text-white">Joshua Hawks</p>
+							</div>
+							<div class="flex -space-x-2">
+								<span
+									class="h-3 w-3 rounded-full bg-emerald-300 shadow-[0_0_12px_3px] shadow-emerald-400/40"
+								/>
+								<span
+									class="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_12px_3px] shadow-cyan-400/40"
+								/>
+							</div>
+						</div>
+					</div>
+					<div
+						class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200"
+					>
+						<p>
+							Senior developer at Texas School Safety Center — pairing design instincts with
+							reliable engineering to build apps that people trust.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
-<section id="about" class="my-10">
-	<div class="container mx-auto flex flex-col justify-center items-start ">
-		<img src={About} alt="about me" class="w-28 md:w-40 ml-4 " />
+<section id="about" class="relative max-w-6xl mx-auto py-16 lg:py-20">
+	<div class="flex items-center justify-between gap-4 mb-10">
+		<div>
+			<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">About</p>
+			<h2 class="text-3xl md:text-4xl font-semibold text-white">
+				Collaborative, design-minded engineering
+			</h2>
+		</div>
+		<div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 	</div>
+
+	<div class="grid md:grid-cols-[1.1fr_0.9fr] gap-8">
+		<div
+			class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 shadow-xl shadow-cyan-500/10"
+		>
+			<p class="text-lg text-slate-200 leading-relaxed">
+				I develop digital products end-to-end—planning features, designing UI, and building the
+				systems that support them. My background in music and design has shaped the way I work: I
+				think a lot about how small details influence the feel of a product.
+			</p>
+			<div class="mt-6 grid sm:grid-cols-2 gap-4">
+				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
+					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Toolbox</p>
+					<p class="mt-2 text-slate-100">React, SvelteKit, Rails, Node, Postgres, Tailwind.</p>
+				</div>
+				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
+					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">How I work</p>
+					<p class="mt-2 text-slate-100">
+						Pair often, stay curious, build in small slices, and always keep accessibility in view.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid gap-4">
+			<div
+				class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-6"
+			>
+				<p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Currently</p>
+				<p class="text-xl font-semibold text-white">
+					Senior Full-Stack Developer @ Texas School Safety Center
+				</p>
+				<p class="mt-3 text-slate-200">
+					Building secure, maintainable apps for state-wide safety programs and creative side
+					projects that keep me curious.
+				</p>
+			</div>
+			<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+				<p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Beyond code</p>
+				<p class="text-slate-200">
+					I’m also a freelance classical musician (oboe & bassoon), occasional designer, and
+					outdoors enthusiast. That mix of structure and creativity shows up in how I write code and
+					how I collaborate.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="projects" class="relative max-w-6xl mx-auto py-16 lg:py-20">
+	<div class="flex items-center justify-between gap-4 mb-10">
+		<div>
+			<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Projects</p>
+			<h2 class="text-3xl md:text-4xl font-semibold text-white">Selected builds and experiments</h2>
+		</div>
+		<div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+	</div>
+
+	<div class="grid gap-6 md:grid-cols-2">
+		{#each projects as project}
+			<ProjectCard {project} />
+		{/each}
+	</div>
+</section>
+
+<section id="skills" class="relative max-w-6xl mx-auto py-16 lg:py-20">
+	<div class="flex items-center justify-between gap-4 mb-10">
+		<div>
+			<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Skills</p>
+			<h2 class="text-3xl md:text-4xl font-semibold text-white">What I'm good at</h2>
+		</div>
+		<div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+	</div>
+
+	<div class="grid gap-6 md:grid-cols-3">
+		{#each skillGroups as skill}
+			<SkillCard {skill} />
+		{/each}
+	</div>
+</section>
+
+<section id="connect" class="relative max-w-6xl mx-auto py-16 lg:py-20">
 	<div
-		class="mx-auto flex flex-col lg:flex-row bg-white shadow-md rounded-md justify-center items-center my-4 divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-gray-100"
+		class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-800 p-8 lg:p-12 shadow-2xl shadow-cyan-500/10 overflow-hidden"
 	>
-		<div class="flex justify-center items-center w-max lg:w-1/4 ">
-			<img src={Headshot} alt="josh hawks headshot" class="w-52 h-52 m-4 shadow-lg rounded-lg" />
+		<div class="absolute -right-10 top-10 h-48 w-48 bg-cyan-500/15 blur-3xl" />
+		<div class="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+			<div class="max-w-xl space-y-3">
+				<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Connect</p>
+				<h3 class="text-3xl font-semibold text-white">Let’s talk about what you’re building.</h3>
+				<p class="text-slate-200">
+					If you’re working on something interesting—whether it’s a fresh UI, a solid API, or a full
+					product—I’d love to hear about it. Feel free to reach out with a note about your team or
+					project.
+				</p>
+			</div>
+
+			<div class="flex flex-wrap gap-4">
+				{#each socials as social}
+					<a
+						href={social.href}
+						target="_blank"
+						rel="noreferrer"
+						class="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-slate-100 hover:border-cyan-300/60 hover:text-cyan-100"
+					>
+						<img
+							src={social.icon}
+							alt={social.label}
+							class="h-6 w-6 invert brightness-200 contrast-200 drop-shadow"
+						/>
+						<span class="font-semibold">{social.label}</span>
+						<span class="text-cyan-200 opacity-0 group-hover:opacity-100 transition-opacity">→</span
+						>
+					</a>
+				{/each}
+			</div>
 		</div>
-
-		<div class="p-1 text-sm sm:text-md md:p-4 xl:text-lg lg:p-6 text-gray-700 text-center w-11/12">
-			<p class="mt-4 sm:mt-0 mb-4 ">
-				Senior Full-Stack Software Developer at the <span class="text-red-800 font-semibold"
-					>Texas School Safety Center</span
-				>, part of Texas State University in San Marcos, TX. With expertise in
-				<span class="text-red-800 font-semibold">React</span>
-				and <span class="text-red-800 font-semibold">Ruby on Rails</span>, I develop and maintain
-				the organization's websites, databases, and applications, ensuring high-quality and
-				efficient solutions. My background in
-				<span class="text-red-800 font-semibold">music education</span>
-				and <span class="text-red-800 font-semibold">graphic design</span> has given me a unique perspective,
-				allowing me to approach problem-solving with creativity and precision.
-			</p>
-
-			<p class="mb-4">
-				In addition to my technical pursuits, I am a freelance classical musician, playing both the
-				<span class="text-red-800 font-semibold">oboe</span> and
-				<span class="text-red-800 font-semibold">bassoon</span>, as well as a graphic designer.
-				Outside of work, I find joy in <span class="text-red-800 font-semibold">hiking</span>,
-				<span class="text-red-800 font-semibold">biking</span>,
-				<span class="text-red-800 font-semibold">softball</span>,
-				<span class="text-red-800 font-semibold">pickleball</span>, and
-				<span class="text-red-800 font-semibold">traveling</span>.
-			</p>
-		</div>
-	</div>
-</section>
-
-<section id="projects" class="my-10">
-	<div class="container mx-auto flex flex-col justify-center items-end">
-		<img src={Projects} alt="projects" class="w-28 md:w-40 mr-4 mb-10" />
-	</div>
-	<div class="flex flex-col lg:flex-row ">
-		<ProjectCard
-			project={{
-				title: 'Bassoon Guru',
-				image: 'https://github.com/jdhawks2132/bassoonguru/blob/main/bassoonGuru.jpg?raw=true',
-				tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
-				description: 'A web application for bassoonists to practice and improve their skills.',
-				github: 'https://github.com/jdhawks2132/bassoonguru',
-				demo: null
-			}}
-		/>
-		<ProjectCard
-			project={{
-				title: 'Thunder Kitties Website',
-				image:
-					'https://github.com/jdhawks2132/tk-web/blob/main/static/images/tk_screenshot.png?raw=true',
-				tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
-				description: 'Website for the Thunder Kitties, a softball team in Dallas, TX.',
-				github: 'https://github.com/jdhawks2132/tk-web',
-				demo: 'https://www.thunderkitties.com/'
-			}}
-		/>
-		<ProjectCard
-			project={{
-				title: 'Escapade',
-				image:
-					'https://github.com/jdhawks2132/escapade-mern/blob/main/frontend/src/assets/images/Escapade-Screenshot.jpg?raw=true',
-				tags: ['React', 'Node', 'Express', 'MongoDB'],
-				description: 'South American travel application that targeting adventurous thrill-seekers.',
-				github: 'https://github.com/jdhawks2132/escapade-mern',
-				demo: null
-			}}
-		/>
-	</div>
-	<div class="flex flex-col lg:flex-row ">
-		<ProjectCard
-			project={{
-				title: 'Vendor Management System',
-				image:
-					'https://github.com/jdhawks2132/mqvc/raw/main/client/src/assets/images/screenshots/dashboard.png?raw=true',
-				tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
-				description: 'Vendor Management System designed for an arts organization.',
-				github: 'https://github.com/jdhawks2132/mqvc',
-				demo: null
-			}}
-		/>
-		<ProjectCard
-			project={{
-				title: 'Texas Bassoon Center',
-				image:
-					'https://github.com/jdhawks2132/tx-bassoon/blob/main/src/lib/assets/images/landing_page.png?raw=true',
-				tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
-				description: 'Landing page for a the Texas Bassoon Center in Dallas, TX.',
-				github: 'https://github.com/jdhawks2132/tx-bassoon',
-				demo: 'https://tx-bassoon-center.vercel.app/'
-			}}
-		/>
-		<ProjectCard
-			project={{
-				title: 'Weather-All',
-				image: 'https://github.com/jdhawks2132/weatherman/blob/main/assets/weatherall.png?raw=true',
-				tags: ['Html', 'Bootstrap', 'JavaScript'],
-				description:
-					'Weather App that uses Openweather to search US cities and return the current forecast.',
-				github: 'https://github.com/jdhawks2132/weatherman',
-				demo: 'https://jdhawks2132.github.io/weatherman/'
-			}}
-		/>
-	</div>
-</section>
-
-<section id="skills" class="my-10">
-	<div class="container mx-auto flex flex-col justify-center items-center">
-		<img src={Skills} alt="projects" class="w-20 md:w-24 mb-10" />
-	</div>
-	<div class="flex flex-col lg:flex-row justify-center items-center">
-		<SkillCard
-			skill={{
-				title: 'Front-End',
-				skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Svelte', 'Tailwind CSS']
-			}}
-		/>
-		<SkillCard
-			skill={{
-				title: 'Back-End',
-				skills: ['Ruby on Rails', 'Node.js', 'Express', 'MySQL/ PostgreSQL', 'MongoDB', 'Firebase']
-			}}
-		/>
-		<SkillCard
-			skill={{
-				title: 'Other',
-				skills: [
-					'Git',
-					'GitHub/ GitLab',
-					'NGINX',
-					'Heroku / Vercel/ Netlify',
-					'Linux (RHEL & Ubuntu)',
-					'Adobe Creative Suite'
-				]
-			}}
-		/>
-	</div>
-</section>
-
-<section id="connect" class="mt-10 flex flex-col justify-center items-center">
-	<div class="container mx-auto flex flex-col justify-center items-center">
-		<img src={Connect} alt="projects" class="w-52 md:w-64 mb-10" />
-	</div>
-	<div class="flex justify-around items-end p-5 w-4/5">
-		<a href="https://www.linkedin.com/in/joshuahawks1/" target="_blank" rel="noreferrer">
-			<img src={LinkedIn} alt="LinkedIn" class="w-12 md:w-24 mb-10" />
-		</a>
-		<a href="https://github.com/jdhawks2132" target="_blank" rel="noreferrer">
-			<img src={GitHub} alt="GitHub" class="w-12 md:w-24 mb-10" />
-		</a>
-		<a href="mailto:jdhawks@gmail.com">
-			<img src={Email} alt="Email" class="w-12 md:w-24 mb-10" />
-		</a>
 	</div>
 </section>
