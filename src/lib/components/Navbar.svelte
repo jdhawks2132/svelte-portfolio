@@ -1,6 +1,6 @@
 <script>
 	let showMenu = false;
-	import Logo from '../assets/svgs/Logo.svg';
+	import Logo from '$lib/assets/svgs/Logo.svg';
 
 	function toggleNavbar() {
 		showMenu = !showMenu;
@@ -21,47 +21,43 @@
 				>Joshua Hawks
 			</a>
 			<!-- Mobile menu button -->
-			<div on:click={toggleNavbar} class="flex md:hidden" on:keyup={toggleNavbar}>
+			<button
+				type="button"
+				class="flex md:hidden text-slate-200 hover:text-cyan-300 focus:outline-none focus:text-cyan-300"
+				on:click={toggleNavbar}
+				aria-expanded={showMenu}
+				aria-label={showMenu ? 'Close navigation menu' : 'Open navigation menu'}
+			>
 				{#if showMenu}
-					<button
-						type="button"
-						class="text-slate-200 hover:text-cyan-300 focus:outline-none focus:text-cyan-300"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6"
-						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-						</svg>
-					</button>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
 				{:else}
-					<button
-						type="button"
-						class="text-slate-200 hover:text-cyan-300 focus:outline-none focus:text-cyan-300"
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
 					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6"
-						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-						</svg>
-					</button>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
 				{/if}
-			</div>
+			</button>
 		</div>
 
 		<div
-			class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 items-end {showMenu
-				? 'flex'
-				: 'hidden'}"
+			class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 items-end"
+			class:flex={showMenu}
+			class:hidden={!showMenu}
 		>
 			<a on:click={closeMenu} class="text-slate-200 hover:text-cyan-300 scroll" href="#about">About</a
 			>
