@@ -22,7 +22,7 @@
 			image: 'https://github.com/jdhawks2132/bassoonguru/blob/main/bassoonGuru.jpg?raw=true',
 			tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
 			description:
-				'A practice companion for bassoonists to level up their fundamentals and repertoire.',
+				'A practice companion for bassoonists to work on fundamentals and keep track of repertoire.',
 			github: 'https://github.com/jdhawks2132/bassoonguru',
 			demo: null
 		},
@@ -32,7 +32,7 @@
 				'https://github.com/jdhawks2132/tk-web/blob/main/static/images/tk_screenshot.png?raw=true',
 			tags: ['Next.js', 'Tailwind CSS'],
 			description:
-				'Fast, playful marketing site for a Dallas softball club with live league updates.',
+				'A simple site for a Dallas softball club, with team info and league details.',
 			github: 'https://github.com/jdhawks2132/tk-web',
 			demo: 'https://www.thunderkitties.com/'
 		},
@@ -42,7 +42,7 @@
 				'https://github.com/jdhawks2132/escapade-mern/blob/main/frontend/src/assets/images/Escapade-Screenshot.jpg?raw=true',
 			tags: ['React', 'Node', 'Express', 'MongoDB'],
 			description:
-				'Adventure planning app focused on bold visuals, curated itineraries, and streamlined booking.',
+				'A MERN travel app for planning South American trips and saving itineraries.',
 			github: 'https://github.com/jdhawks2132/escapade-mern',
 			demo: null
 		},
@@ -51,7 +51,8 @@
 			image:
 				'https://github.com/jdhawks2132/mqvc/raw/main/client/src/assets/images/screenshots/dashboard.png?raw=true',
 			tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
-			description: 'Internal tool for an arts org—vendor onboarding, dashboards, and reporting.',
+			description:
+				'An internal tool for an arts organization to manage vendors, onboarding, and reporting.',
 			github: 'https://github.com/jdhawks2132/mqvc',
 			demo: null
 		},
@@ -61,7 +62,7 @@
 				'https://github.com/jdhawks2132/tx-bassoon/blob/main/src/lib/assets/images/landing_page.png?raw=true',
 			tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
 			description:
-				'Elegant landing page for a boutique instrument shop built for performance and SEO.',
+				'A landing page for a boutique bassoon shop in Texas, built with SvelteKit.',
 			github: 'https://github.com/jdhawks2132/tx-bassoon',
 			demo: 'https://tx-bassoon-center.vercel.app/'
 		},
@@ -69,7 +70,8 @@
 			title: 'Weather-All',
 			image: 'https://github.com/jdhawks2132/weatherman/blob/main/assets/weatherall.png?raw=true',
 			tags: ['HTML', 'Bootstrap', 'JavaScript'],
-			description: 'Weather explorer using OpenWeather—clear, minimal UI tuned for daily checks.',
+			description:
+				'A small weather app using OpenWeather to show current conditions for U.S. cities.',
 			github: 'https://github.com/jdhawks2132/weatherman',
 			demo: 'https://jdhawks2132.github.io/weatherman/'
 		}
@@ -114,12 +116,13 @@
 				Senior Full-Stack Engineer
 			</div>
 			<h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-slate-50">
-				I build thoughtful, reliable software designed with clarity.
+				I build clear, reliable software for the web.
 			</h1>
 			<p class="text-lg text-slate-300 max-w-2xl">
-				I’m a full-stack developer who enjoys shaping products from first idea to production launch.
-				I work comfortably across Rails, React, Svelte, Next.js, and Node. I care a lot about clean
-				interfaces, maintainable systems, and code that feels good to come back to.
+				I’m a full-stack developer based in Dallas. I like taking products from a rough idea to
+				something people actually use. Most days that means Rails, React, Svelte/Next.js, and Node.
+				I care about interfaces that make sense, code that’s easy to change, and systems that don’t
+				surprise you at 2 a.m.
 			</p>
 			<div class="flex flex-wrap gap-3">
 				{#each heroStack as tech}
@@ -154,7 +157,7 @@
 				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
 					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
 					<p class="mt-1 text-base text-slate-100">
-						Well-structured React front-ends with solid Rails/Node backends.
+						React and Svelte front-ends backed by Rails and Node.
 					</p>
 				</div>
 				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
@@ -179,7 +182,9 @@
 						<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent" />
 						<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
 							<div>
-								<p class="text-xs uppercase tracking-[0.2em] text-slate-300">Product builder</p>
+								<p class="text-xs uppercase tracking-[0.2em] text-slate-300">
+									Full-Stack Developer
+								</p>
 								<p class="text-lg font-semibold text-white">Joshua Hawks</p>
 							</div>
 							<div class="flex -space-x-2">
@@ -196,8 +201,8 @@
 						class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200"
 					>
 						<p>
-							Senior developer at Texas School Safety Center — pairing design instincts with
-							reliable engineering to build apps that people trust.
+							Senior developer at the Texas School Safety Center, working on internal tools and
+							public-facing apps that support school safety across Texas.
 						</p>
 					</div>
 				</div>
@@ -222,9 +227,9 @@
 			class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 shadow-xl shadow-cyan-500/10"
 		>
 			<p class="text-lg text-slate-200 leading-relaxed">
-				I develop digital products end-to-end—planning features, designing UI, and building the
-				systems that support them. My background in music and design has shaped the way I work: I
-				think a lot about how small details influence the feel of a product.
+				I work across the stack: planning features with stakeholders, sketching out UI, and building
+				the APIs and data models underneath. My background in music and design shapes how I think
+				about rhythm and structure, and how small details change the way a product feels to use.
 			</p>
 			<div class="mt-6 grid sm:grid-cols-2 gap-4">
 				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
@@ -234,7 +239,7 @@
 				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
 					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">How I work</p>
 					<p class="mt-2 text-slate-100">
-						Pair often, stay curious, build in small slices, and always keep accessibility in view.
+						Pair often, stay curious, build in small slices, and keep accessibility in view.
 					</p>
 				</div>
 			</div>
@@ -249,14 +254,14 @@
 					Senior Full-Stack Developer @ Texas School Safety Center
 				</p>
 				<p class="mt-3 text-slate-200">
-					Building secure, maintainable apps for state-wide safety programs and creative side
-					projects that keep me curious.
+					Building secure, maintainable apps for statewide safety programs, alongside side projects
+					that give me room to experiment with new tools and ideas.
 				</p>
 			</div>
 			<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
 				<p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Beyond code</p>
 				<p class="text-slate-200">
-					I’m also a freelance classical musician (oboe & bassoon), occasional designer, and
+					I’m also a freelance classical musician (oboe &amp; bassoon), occasional designer, and
 					outdoors enthusiast. That mix of structure and creativity shows up in how I write code and
 					how I collaborate.
 				</p>
@@ -269,7 +274,7 @@
 	<div class="flex items-center justify-between gap-4 mb-10">
 		<div>
 			<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Projects</p>
-			<h2 class="text-3xl md:text-4xl font-semibold text-white">Selected builds and experiments</h2>
+			<h2 class="text-3xl md:text-4xl font-semibold text-white">Selected work and side projects</h2>
 		</div>
 		<div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 	</div>
@@ -285,7 +290,7 @@
 	<div class="flex items-center justify-between gap-4 mb-10">
 		<div>
 			<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Skills</p>
-			<h2 class="text-3xl md:text-4xl font-semibold text-white">What I'm good at</h2>
+			<h2 class="text-3xl md:text-4xl font-semibold text-white">Skills &amp; tools</h2>
 		</div>
 		<div class="h-px flex-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 	</div>
@@ -307,9 +312,9 @@
 				<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Connect</p>
 				<h3 class="text-3xl font-semibold text-white">Let’s talk about what you’re building.</h3>
 				<p class="text-slate-200">
-					If you’re working on something interesting—whether it’s a fresh UI, a solid API, or a full
-					product—I’d love to hear about it. Feel free to reach out with a note about your team or
-					project.
+					If you’re working on something you care about—whether it’s a new UI, an internal tool, or a
+					full product—I’d be glad to hear about it. Feel free to reach out with a note about your
+					team or project.
 				</p>
 			</div>
 
