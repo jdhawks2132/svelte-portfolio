@@ -31,7 +31,7 @@
 				href={project.github}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-slate-950 bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 rounded-full shadow-lg shadow-cyan-500/20 hover:from-cyan-200 hover:to-emerald-200"
+				class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-gray-700 bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 rounded-full shadow-lg shadow-cyan-500/20 hover:from-cyan-200 hover:to-emerald-200"
 				>GitHub</a
 			>
 			{#if project.demo}

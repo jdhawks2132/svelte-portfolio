@@ -140,7 +140,7 @@
 			<div class="flex flex-wrap gap-4">
 				<a
 					href="#projects"
-					class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 px-6 py-3 text-slate-950 font-semibold shadow-lg shadow-cyan-500/30 hover:from-cyan-200 hover:to-emerald-200"
+					class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 px-6 py-3 text-gray-700 font-semibold shadow-lg shadow-cyan-500/30 hover:from-cyan-200 hover:to-emerald-200"
 				>
 					View Projects
 				</a>
