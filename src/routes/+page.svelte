@@ -104,8 +104,12 @@
 </svelte:head>
 
 <section id="home" class="relative overflow-hidden pt-16 lg:pt-24 pb-12">
-	<div class="absolute -left-10 top-10 h-72 w-72 bg-cyan-500/20 blur-3xl" />
-	<div class="absolute right-0 bottom-0 h-80 w-80 bg-emerald-500/10 blur-3xl" />
+	<div
+		class="pointer-events-none absolute z-0 hidden lg:block -left-10 top-10 h-72 w-72 bg-cyan-500/25 blur-3xl"
+	/>
+	<div
+		class="pointer-events-none absolute z-0 hidden lg:block right-0 bottom-0 h-72 w-72 bg-emerald-500/15 blur-3xl"
+	/>
 
 	<div class="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
 		<div class="space-y-8">

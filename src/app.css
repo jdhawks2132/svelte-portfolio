@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:global(*),
+:global(*::before),
+:global(*::after) {
+	box-sizing: border-box;
+}
+
 :global(html, body) {
 	background: #020617;
 	color: #e2e8f0;
@@ -13,9 +19,22 @@
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	max-width: 100vw;
 }
 
 :global(#svelte) {
 	min-height: 100vh;
 	background: #020617;
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
+	position: relative;
+}
+
+:global(main) {
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
+	position: relative;
 }

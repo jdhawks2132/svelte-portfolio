@@ -7,7 +7,7 @@
 
 <Navbar />
 
-<main class="min-h-screen bg-[#0b1120] text-slate-100 px-4 lg:px-10">
+<main class="min-h-screen bg-[#0b1120] text-slate-100 px-4 lg:px-10 overflow-x-hidden">
 	<Transition url={$page.url}>
 		<slot />
 	</Transition>
