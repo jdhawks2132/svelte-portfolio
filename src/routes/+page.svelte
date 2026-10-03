@@ -1,233 +1,88 @@
 <script>
 	import Headshot from '$lib/assets/Josh.jpeg';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
-	import SkillCard from '$lib/components/SkillCard.svelte';
 	import SectionHeader from '$lib/components/SectionHeader.svelte';
-	import { heroStack, projects, skillGroups, socials } from '$lib/data/content.js';
+	import { experience, projects, socials } from '$lib/data/content.js';
 </script>
 
 <svelte:head>
-	<title>Joshua Hawks | Full-Stack Engineer</title>
+	<title>Joshua Hawks</title>
+	<meta
+		name="description"
+		content="Joshua Hawks, senior full-stack developer at the Texas School Safety Center in Dallas."
+	/>
 </svelte:head>
 
-<section id="home" class="relative overflow-hidden pt-16 lg:pt-24 pb-12">
-	<div
-		class="pointer-events-none absolute z-0 hidden lg:block -left-10 top-10 h-72 w-72 bg-cyan-500/25 blur-3xl"
-	/>
-	<div
-		class="pointer-events-none absolute z-0 hidden lg:block right-0 bottom-0 h-72 w-72 bg-emerald-500/15 blur-3xl"
-	/>
-
-	<div class="relative max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-		<div class="space-y-8">
-			<div
-				class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.25em] text-cyan-200/80"
+<header class="pb-16 pt-16 sm:pt-24">
+	<img src={Headshot} alt="" class="mb-7 size-18 rounded-full object-cover" />
+	<h1 class="mb-4 text-4xl font-semibold tracking-tight sm:text-5xl">Joshua Hawks</h1>
+	<p class="max-w-[60ch] text-lg text-stone-600 dark:text-stone-300">
+		Senior full-stack developer at the Texas School Safety Center, based in Dallas. I mostly work in
+		Ruby on Rails and React, with some Svelte and Node on the side.
+	</p>
+	<div class="mt-7 flex gap-6 text-[15px] font-medium">
+		{#each socials as social (social.href)}
+			<ExternalLink
+				href={social.href}
+				arrow={false}
+				class="border-b border-stone-300 pb-0.5 transition-colors hover:border-teal-600 dark:border-stone-700 dark:hover:border-teal-300"
+				>{social.label}</ExternalLink
 			>
-				<span class="h-2 w-2 rounded-full bg-cyan-300 animate-pulse" />
-				Senior Full-Stack Engineer
-			</div>
-			<h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-slate-50">
-				I build clear, reliable software for the web.
-			</h1>
-			<p class="text-lg text-slate-300 max-w-2xl">
-				I’m a full-stack developer based in Dallas. I like taking products from a rough idea to
-				something people actually use. Most days that means Rails, React, Svelte/Next.js, and Node.
-				I care about interfaces that make sense, code that’s easy to change, and systems that don’t
-				surprise you at 2 a.m.
-			</p>
-			<div class="flex flex-wrap gap-3">
-				{#each heroStack as tech}
-					<span
-						class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-100"
-					>
-						{tech}
-					</span>
-				{/each}
-			</div>
-			<div class="flex flex-wrap gap-4">
-				<a
-					href="#projects"
-					class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-300 via-emerald-300 to-blue-400 px-6 py-3 text-gray-700 font-semibold shadow-lg shadow-cyan-500/30 hover:from-cyan-200 hover:to-emerald-200"
-				>
-					View Projects
-				</a>
-				<a
-					href="#connect"
-					class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-slate-100 hover:border-cyan-300/60 hover:text-cyan-100"
-				>
-					Say Hello
-				</a>
-			</div>
-			<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
-					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Mission</p>
-					<p class="mt-1 text-base text-slate-100">
-						Build software that feels steady and dependable.
-					</p>
-				</div>
-				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
-					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
-					<p class="mt-1 text-base text-slate-100">
-						React and Svelte front-ends backed by Rails and Node.
-					</p>
-				</div>
-				<div class="rounded-xl border border-white/10 bg-white/5 p-4">
-					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Location</p>
-					<p class="mt-1 text-base text-slate-100">Dallas, Texas</p>
-				</div>
-			</div>
-		</div>
+		{/each}
+	</div>
+</header>
 
-		<div class="relative">
-			<div
-				class="absolute -inset-6 bg-gradient-to-br from-cyan-500/20 via-slate-900 to-emerald-500/10 blur-3xl"
-			/>
-			<div
-				class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-2xl shadow-cyan-500/10 backdrop-blur"
-			>
-				<div class="p-6">
-					<div
-						class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800"
+<section id="experience" class="border-t border-stone-200 py-14 dark:border-stone-800">
+	<SectionHeader title="Experience" />
+	<div class="space-y-10">
+		{#each experience as job (job.title)}
+			<div class="grid gap-x-6 gap-y-1 sm:grid-cols-[140px_1fr]">
+				<p class="pt-0.5 text-sm tabular-nums text-stone-500 dark:text-stone-400">{job.dates}</p>
+				<div>
+					<h3 class="font-semibold">{job.title}</h3>
+					<p class="text-stone-600 dark:text-stone-300">{job.org}</p>
+					<ul
+						class="mt-3 list-disc space-y-1.5 pl-[18px] text-stone-600 marker:text-stone-400 dark:text-stone-300 dark:marker:text-stone-600"
 					>
-						<img src={Headshot} alt="Josh Hawks headshot" class="w-full h-full object-cover" />
-						<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent" />
-						<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-							<div>
-								<p class="text-xs uppercase tracking-[0.2em] text-slate-300">
-									Full-Stack Developer
-								</p>
-								<p class="text-lg font-semibold text-white">Joshua Hawks</p>
-							</div>
-							<div class="flex -space-x-2">
-								<span
-									class="h-3 w-3 rounded-full bg-emerald-300 shadow-[0_0_12px_3px] shadow-emerald-400/40"
-								/>
-								<span
-									class="h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_12px_3px] shadow-cyan-400/40"
-								/>
-							</div>
-						</div>
-					</div>
-					<div
-						class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200"
-					>
-						<p>
-							Senior developer at the Texas School Safety Center, working on internal tools and
-							public-facing apps that support school safety across Texas.
-						</p>
-					</div>
+						{#each job.points as point (point)}
+							<li>{point}</li>
+						{/each}
+					</ul>
 				</div>
 			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
-<section id="about" class="relative max-w-6xl mx-auto py-16 lg:py-20">
-	<SectionHeader label="About" title="Collaborative, design-minded engineering" />
-
-	<div class="grid md:grid-cols-[1.1fr_0.9fr] gap-8">
-		<div
-			class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 shadow-xl shadow-cyan-500/10"
-		>
-			<p class="text-lg text-slate-200 leading-relaxed">
-				I work across the stack: planning features with stakeholders, sketching out UI, and building
-				the APIs and data models underneath. My background in music and design shapes how I think
-				about rhythm and structure, and how small details change the way a product feels to use.
-			</p>
-			<div class="mt-6 grid sm:grid-cols-2 gap-4">
-				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
-					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">Toolbox</p>
-					<p class="mt-2 text-slate-100">React, SvelteKit, Rails, Node, Postgres, Tailwind.</p>
-				</div>
-				<div class="rounded-xl border border-white/10 bg-slate-900/60 p-4">
-					<p class="text-xs uppercase tracking-[0.2em] text-slate-400">How I work</p>
-					<p class="mt-2 text-slate-100">
-						Pair often, stay curious, build in small slices, and keep accessibility in view.
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="grid gap-4">
-			<div
-				class="rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-6"
-			>
-				<p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Currently</p>
-				<p class="text-xl font-semibold text-white">
-					Senior Full-Stack Developer @ Texas School Safety Center
-				</p>
-				<p class="mt-3 text-slate-200">
-					Building secure, maintainable apps for statewide safety programs, alongside side projects
-					that give me room to experiment with new tools and ideas.
-				</p>
-			</div>
-			<div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-				<p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Beyond code</p>
-				<p class="text-slate-200">
-					I’m also a freelance classical musician (oboe &amp; bassoon), occasional designer, and
-					outdoors enthusiast. That mix of structure and creativity shows up in how I write code and
-					how I collaborate.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="projects" class="relative max-w-6xl mx-auto py-16 lg:py-20">
-	<SectionHeader label="Projects" title="Selected work and side projects" />
-
-	<div class="grid gap-6 md:grid-cols-2">
-		{#each projects as project}
+<section id="work" class="border-t border-stone-200 py-14 dark:border-stone-800">
+	<SectionHeader title="Side projects" />
+	<div class="grid gap-x-7 gap-y-10 sm:grid-cols-2">
+		{#each projects as project (project.title)}
 			<ProjectCard {project} />
 		{/each}
 	</div>
 </section>
 
-<section id="skills" class="relative max-w-6xl mx-auto py-16 lg:py-20">
-	<SectionHeader label="Skills" title="Skills &amp; tools" />
-
-	<div class="grid gap-6 md:grid-cols-3">
-		{#each skillGroups as skill}
-			<SkillCard {skill} />
-		{/each}
+<section id="about" class="border-t border-stone-200 py-14 dark:border-stone-800">
+	<SectionHeader title="About" />
+	<div class="max-w-[62ch] space-y-4 text-stone-600 dark:text-stone-300">
+		<p>I was a band director before I moved into software in 2022.</p>
+		<p>
+			I still play oboe and bassoon as a freelance musician, do a little design, and get outdoors
+			when I can.
+		</p>
 	</div>
-</section>
-
-<section id="connect" class="relative max-w-6xl mx-auto py-16 lg:py-20">
-	<div
-		class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-800 p-8 lg:p-12 shadow-2xl shadow-cyan-500/10 overflow-hidden"
-	>
-		<div class="absolute -right-10 top-10 h-48 w-48 bg-cyan-500/15 blur-3xl" />
-		<div class="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-			<div class="max-w-xl space-y-3">
-				<p class="text-xs uppercase tracking-[0.3em] text-cyan-200/80">Connect</p>
-				<h3 class="text-3xl font-semibold text-white">Let’s talk about what you’re building.</h3>
-				<p class="text-slate-200">
-					If you’re working on something you care about—whether it’s a new UI, an internal tool, or a
-					full product—I’d be glad to hear about it. Feel free to reach out with a note about your
-					team or project.
-				</p>
-			</div>
-
-			<div class="flex flex-wrap gap-4">
-				{#each socials as social}
-					<a
-						href={social.href}
-						target="_blank"
-						rel="noreferrer"
-						class="group inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-4 py-3 text-slate-100 hover:border-cyan-300/60 hover:text-cyan-100"
-					>
-						<img
-							src={social.icon}
-							alt={social.label}
-							class="h-6 w-6 invert brightness-200 contrast-200 drop-shadow"
-						/>
-						<span class="font-semibold">{social.label}</span>
-						<span class="text-cyan-200 opacity-0 group-hover:opacity-100 transition-opacity">→</span
-						>
-					</a>
-				{/each}
-			</div>
-		</div>
-	</div>
+	<dl class="mt-8 grid gap-x-6 gap-y-1 text-[15px] sm:grid-cols-[140px_1fr] sm:gap-y-2.5">
+		<dt class="text-stone-500 dark:text-stone-400">Usually with</dt>
+		<dd class="mb-3 text-stone-600 dark:text-stone-300 sm:mb-0">
+			Ruby on Rails, React, SvelteKit, Next.js, Node, PostgreSQL / MySQL, Tailwind
+		</dd>
+		<dt class="text-stone-500 dark:text-stone-400">Also</dt>
+		<dd class="mb-3 text-stone-600 dark:text-stone-300 sm:mb-0">
+			Sidekiq &amp; Redis, Ansible, NGINX, RHEL, Git, Adobe CC
+		</dd>
+		<dt class="text-stone-500 dark:text-stone-400">Education</dt>
+		<dd class="text-stone-600 dark:text-stone-300">B.S., Texas A&amp;M University–Commerce</dd>
+	</dl>
 </section>

@@ -1,29 +1,58 @@
-import GitHub from '$lib/assets/svgs/github.svg';
-import LinkedIn from '$lib/assets/svgs/linkedin.svg';
-import Email from '$lib/assets/svgs/email.svg';
+import bassoonGuru from '$lib/assets/projects/bassoon-guru.jpg';
+import thunderKitties from '$lib/assets/projects/thunder-kitties.jpg';
+import escapade from '$lib/assets/projects/escapade.jpg';
+import vendorManagement from '$lib/assets/projects/vendor-management.jpg';
+import txBassoon from '$lib/assets/projects/tx-bassoon.jpg';
+import weatherAll from '$lib/assets/projects/weather-all.jpg';
 
-export const heroStack = [
-	'Ruby on Rails',
-	'React',
-	'Next.js',
-	'SvelteKit',
-	'Node',
-	'PostgreSQL',
-	'Tailwind'
+export const socials = [
+	{ label: 'GitHub', href: 'https://github.com/jdhawks2132' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/joshuahawks1/' }
+];
+
+export const experience = [
+	{
+		dates: '2024 — Now',
+		title: 'Senior Full-Stack Developer',
+		org: 'Texas School Safety Center',
+		points: [
+			'Building a communications app as the sole developer, end to end.',
+			"Build and maintain the Center's internal and public web apps.",
+			'Moving older apps over to Rails and React.',
+			'Manage the production and QA servers and deployments.'
+		]
+	},
+	{
+		dates: '2022 — 2024',
+		title: 'Full-Stack Developer',
+		org: 'Texas School Safety Center',
+		points: [
+			'Worked on the Emergency Operations Plan review app (Rails, React, Sidekiq, Redis), launched in 2023.',
+			'Built a Rails API used for event registration, site search, and two state registries.',
+			'Set up QA environments for our apps, automated with Ansible.'
+		]
+	},
+	{
+		dates: '2022 — 2023',
+		title: 'Teaching Assistant',
+		org: 'Washington University Coding Bootcamp',
+		points: ['Helped students through a 25-week MERN bootcamp: projects, Git, and planning.']
+	}
 ];
 
 export const projects = [
 	{
 		title: 'Bassoon Guru',
-		image: 'https://github.com/jdhawks2132/bassoonguru/blob/main/bassoonGuru.jpg?raw=true',
+		image: bassoonGuru,
 		tags: ['React', 'Ruby on Rails', 'PostgreSQL'],
-		description: 'A practice companion for bassoonists to work on fundamentals and keep track of repertoire.',
+		description:
+			'A practice companion for bassoonists to work on fundamentals and keep track of repertoire.',
 		github: 'https://github.com/jdhawks2132/bassoonguru',
 		demo: null
 	},
 	{
 		title: 'Thunder Kitties Website',
-		image: 'https://github.com/jdhawks2132/tk-web/blob/main/static/images/tk_screenshot.png?raw=true',
+		image: thunderKitties,
 		tags: ['Next.js', 'Tailwind CSS'],
 		description: 'A simple site for a Dallas softball club, with team info and league details.',
 		github: 'https://github.com/jdhawks2132/tk-web',
@@ -31,8 +60,7 @@ export const projects = [
 	},
 	{
 		title: 'Escapade',
-		image:
-			'https://github.com/jdhawks2132/escapade-mern/blob/main/frontend/src/assets/images/Escapade-Screenshot.jpg?raw=true',
+		image: escapade,
 		tags: ['React', 'Node', 'Express', 'MongoDB'],
 		description: 'A MERN travel app for planning South American trips and saving itineraries.',
 		github: 'https://github.com/jdhawks2132/escapade-mern',
@@ -40,8 +68,7 @@ export const projects = [
 	},
 	{
 		title: 'Vendor Management System',
-		image:
-			'https://github.com/jdhawks2132/mqvc/raw/main/client/src/assets/images/screenshots/dashboard.png?raw=true',
+		image: vendorManagement,
 		tags: ['React', 'Ruby on Rails', 'PostgreSQL', 'Tailwind CSS'],
 		description:
 			'An internal tool for an arts organization to manage vendors, onboarding, and reporting.',
@@ -50,8 +77,7 @@ export const projects = [
 	},
 	{
 		title: 'Texas Bassoon Center',
-		image:
-			'https://github.com/jdhawks2132/tx-bassoon/blob/main/src/lib/assets/images/landing_page.png?raw=true',
+		image: txBassoon,
 		tags: ['Svelte', 'SvelteKit', 'Tailwind CSS'],
 		description: 'A landing page for a boutique bassoon shop in Texas, built with SvelteKit.',
 		github: 'https://github.com/jdhawks2132/tx-bassoon',
@@ -59,32 +85,11 @@ export const projects = [
 	},
 	{
 		title: 'Weather-All',
-		image: 'https://github.com/jdhawks2132/weatherman/blob/main/assets/weatherall.png?raw=true',
+		image: weatherAll,
 		tags: ['HTML', 'Bootstrap', 'JavaScript'],
 		description:
 			'A small weather app using OpenWeather to show current conditions for U.S. cities.',
 		github: 'https://github.com/jdhawks2132/weatherman',
 		demo: 'https://jdhawks2132.github.io/weatherman/'
 	}
-];
-
-export const skillGroups = [
-	{
-		title: 'Front-End',
-		skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Svelte', 'Tailwind CSS']
-	},
-	{
-		title: 'Back-End',
-		skills: ['Ruby on Rails', 'Node.js', 'Express', 'MySQL / PostgreSQL', 'MongoDB', 'Firebase']
-	},
-	{
-		title: 'Ops & Craft',
-		skills: ['Git', 'NGINX', 'Heroku / Vercel / Netlify', 'Linux', 'Adobe CC']
-	}
-];
-
-export const socials = [
-	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/joshuahawks1/', icon: LinkedIn },
-	{ label: 'GitHub', href: 'https://github.com/jdhawks2132', icon: GitHub },
-	{ label: 'Email', href: 'mailto:jdhawks@gmail.com', icon: Email }
 ];

@@ -1,10 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition';
-	export let url;
+
+	let { url, children } = $props();
 </script>
 
 {#key url}
 	<div in:fade>
-		<slot />
+		{@render children()}
 	</div>
 {/key}
