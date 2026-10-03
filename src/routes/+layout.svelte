@@ -1,11 +1,16 @@
 <script>
 	import '../app.css';
+	import interLatin from '@fontsource-variable/inter/files/inter-latin-opsz-normal.woff2?url';
 	import { page } from '$app/state';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Transition from '$lib/components/Transition.svelte';
 
 	let { children } = $props();
 </script>
+
+<svelte:head>
+	<link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin="anonymous" />
+</svelte:head>
 
 <a
 	href="#content"
